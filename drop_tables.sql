@@ -1,0 +1,8 @@
+DROP TABLE Record;
+DROP TABLE Cashier;
+DROP TABLE Bill;
+DROP TABLE Customer;
+DROP TABLE Medicine;
+DROP TABLE Stock;
+DROP TABLE Employee;
+DROP TABLE Manager;
