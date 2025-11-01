@@ -1,3 +1,35 @@
+
+CREATE TABLE Patient (
+    PatientID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Gender ENUM('Male', 'Female', 'Other'),
+    Age INT CHECK (Age BETWEEN 0 AND 120),
+    Phone VARCHAR(15),
+    Address VARCHAR(100)
+);
+
+CREATE TABLE Doctor (
+    DoctorID INT AUTO_INCREMENT PRIMARY KEY,
+    DoctorName VARCHAR(100) NOT NULL,
+    Specialization VARCHAR(100),
+    Phone VARCHAR(15),
+    Email VARCHAR(100)
+);
+
+
+CREATE TABLE Appointment (
+    AppointmentID INT AUTO_INCREMENT PRIMARY KEY,
+    PatientID INT,
+    DoctorID INT,
+    AppointmentDate DATE,
+    AppointmentTime TIME,
+    Purpose VARCHAR(255),
+    FOREIGN KEY (PatientID) REFERENCES Patient(PatientID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)
+);
+
+
 CREATE TABLE Manager (
     Mgr_id NUMBER PRIMARY KEY NOT NULL,
     Mgr_fname varchar(50) NOT NULL,
