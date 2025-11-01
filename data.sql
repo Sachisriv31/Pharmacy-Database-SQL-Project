@@ -27,3 +27,15 @@ INSERT INTO Cashier VALUES (1,'Naman','Shukla','9867457891','Delhi',2001);
 INSERT INTO Record VALUES (TO_DATE('2020-07-12', 'YYYY-MM-DD'), 15, 1500, 600, 103, 'Naman');
 INSERT INTO Record VALUES (TO_DATE('2023-07-15', 'YYYY-MM-DD'), 20, 1600, 700, 103, 'Naman');
 INSERT INTO Record VALUES (TO_DATE('2023-07-21', 'YYYY-MM-DD'), 45, 1800, 800, 103, 'Naman');
+
+INSERT INTO Patient (FirstName, LastName, Gender, Age, Phone, Address)
+VALUES ('Aarav', 'Sharma', 'Male', 32, '9876543210', 'Lucknow'),
+       ('Isha', 'Verma', 'Female', 28, '9845012345', 'Delhi');
+
+INSERT INTO Doctor (DoctorName, Specialization, Phone, Email)
+VALUES ('Dr. Meera Nair', 'Cardiology', '9123456789', 'meera.nair@hospital.com'),
+       ('Dr. Rohan Kapoor', 'Neurology', '9871234560', 'rohan.kapoor@hospital.com');
+
+INSERT INTO Appointment (PatientID, DoctorID, AppointmentDate, AppointmentTime, Purpose)
+VALUES (1, 1, '2025-11-02', '10:00:00', 'Routine Checkup'),
+       (2, 2, '2025-11-03', '12:30:00', 'Migraine Consultation');
