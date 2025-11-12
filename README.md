@@ -1,4 +1,4 @@
-# Pharmacy-Database-SQL-Project
+# Hospital Management System-SQL-Project
 Mini SQL-based pharmacy database project with schema, data, queries, and trigger
 
 Pharmacy Management SQL Project
